@@ -42,8 +42,7 @@
             font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
-            background: #ba3ada;
-            -webkit-text-fill-color: transparent;
+            color: #ba3ada;
         }
         
         #inicio .contenido header .contenido-header nav ul {
@@ -64,7 +63,7 @@
             color: #ba3ada;
         }
         
-        #inicio .contenido header .contenido-header .redes a {
+        #inicio .contenido header .contenido-header .redes-nav, .redes-footer a {
             text-decoration: none;
             color: #fff;
             display: inline-block;
@@ -72,7 +71,7 @@
             transition: .5s;
         }
         
-        #inicio .contenido header .contenido-header .redes a:hover {
+        #inicio .contenido header .contenido-header .redes-nav,  a:hover {
             color: #ba3ada;
         }
         
@@ -200,7 +199,7 @@
             margin-bottom: 12px;
         }
         
-        #sobremi .sobremi a {
+        #sobremi .sobremi button {
             display: inline-block;
             text-decoration: none;
             color: #000;
@@ -209,9 +208,10 @@
             padding: 10px 20px;
             margin-top: 30px;
             transition: .5s;
+            cursor: pointer;
         }
         
-        #sobremi .sobremi a:hover {
+        #sobremi .sobremi button:hover {
             background-color: #ba3ada;
             color: #fff;
         }
@@ -528,9 +528,6 @@
         /* *********************/
         
         @media screen and (max-width: 800px) {
-            .redes {
-                display: none;
-            }
             nav {
                 display: none;
             }
@@ -562,8 +559,10 @@
                 display: block;
             }
             #sobremi .contenedor-foto {
-                max-width: 200px;
+                max-width: 100px;
                 margin: auto;
+                display: flex;
+                justify-content: center;
             }
             #sobremi .contenedor-foto img {
                 padding: 8px;

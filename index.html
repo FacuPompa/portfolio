@@ -19,7 +19,7 @@
             <header>
                 <div class="contenido-header">
                     <h1 class="logo">/FP\</h1>
-                    <nav id="nav" class="">
+                    <nav id="nav">
                         <ul id="links">
                             <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
                             <li><a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a></li>
@@ -28,14 +28,13 @@
                             <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
                         </ul>
                     </nav>
-
+    
                     <!-- Icono del menu responsive -->
-                    <div id="icono-nav" onclick="responsiveMenu()">
+                    <div id="icono-nav" onclick="toggleMenu()">
                         <i class="fa-solid fa-bars"></i>
                     </div>
-
-
-                    <div class="redes">
+    
+                    <div class="redes-nav responsive">
                         <a href="https://github.com/FacuPompa"><i class="fa-brands fa-github"></i></a>
                         <a href="https://twitter.com/facuupompa"><i class="fa-brands fa-twitter"></i></a>
                         <a href="https://www.instagram.com/facuupompa/"><i class="fa-brands fa-instagram"></i></a>
@@ -62,7 +61,7 @@
             <h3>Desarrollador Web</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur reprehenderit voluptatibus blanditiis nulla adipisci iste fuga expedita, ea exercitationem dicta, similique rem, atque soluta recusandae ipsam autem. Sapiente, quo ducimus?</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nam a beatae natus.</p>
-            <a href="#">Descargar CV</a>
+            <button id="downloadbtn">Descargar CV</button>
         </div>
     </section>
 
@@ -187,18 +186,18 @@
 
     <!-- SECCTION C O N T A C T O -->
     <section id="contacto">
-        <h3 class="titulo-seccion">Contactanos ahora</h3>
+        <h3 class="titulo-seccion">Contactame ahora</h3>
         <div class="contenedor-form">
-            <form action="">
+            <form id="form" action="https://formspree.io/f/xqkojejz" method="POST">
                 <div class="fila mitad">
-                    <input type="text" placeholder="Nombre Completo *" class="input-mitad">
-                    <input type="email" placeholder="Dirección de Email" class="input-mitad">
+                    <input type="text" placeholder="Nombre Completo *" class="input-mitad" name="name" required="">
+                    <input type="email" placeholder="Dirección de Email" class="input-mitad" name="email" required="">
                 </div>
                 <div class="fila">
-                    <input type="text" placeholder="Tema..." class="input-full">
+                    <input type="text" placeholder="Tema..." class="input-full" name="title" required="">
                 </div>
                 <div class="fila">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full" name="message" required=""></textarea>
                 </div>
 
                 <input type="submit" value="Enviar Mensaje" class="btn-enviar">
@@ -208,8 +207,8 @@
 
     <!-- SECCION FOOTER -->
     <footer>
-        <p>Todos los derechos reservados - 2023</p>
-        <div class="redes">
+        <p>&copy Todos los derechos reservados - 2023</p>
+        <div class="redes-footer">
             <a href="https://github.com/FacuPompa"><i class="fa-brands fa-github"></i></a>
             <a href="https://twitter.com/facuupompa"><i class="fa-brands fa-twitter"></i></a>
             <a href="https://www.instagram.com/facuupompa/"><i class="fa-brands fa-instagram"></i></a>
@@ -218,6 +217,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
