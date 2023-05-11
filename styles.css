@@ -38,8 +38,12 @@
         }
         
         #inicio .contenido header .contenido-header h1 {
-            text-align: center;
-            color: #dc50ff;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #ba3ada, #ba3ada);
+            -webkit-text-fill-color: transparent;
         }
         
         #inicio .contenido header .contenido-header nav ul {
@@ -57,7 +61,7 @@
         }
         
         #inicio .contenido header .contenido-header nav ul li a:hover {
-            color: #dc50ff;
+            color: #ba3ada;
         }
         
         #inicio .contenido header .contenido-header .redes a {
@@ -69,11 +73,11 @@
         }
         
         #inicio .contenido header .contenido-header .redes a:hover {
-            color: #dc50ff;
+            color: #ba3ada;
         }
         
         #inicio .contenido header .contenido-header .seleccionado {
-            color: #dc50ff;
+            color: #ba3ada;
         }
         
         #inicio .contenido .presentacion {
@@ -102,7 +106,7 @@
         
         #inicio .contenido .presentacion h2 span {
             font-size: 55px;
-            color: #dc50ff;
+            color: #ba3ada;
         }
         
         #inicio .contenido .presentacion .descripcion {
@@ -126,7 +130,7 @@
         }
         
         #inicio .contenido .presentacion a:hover {
-            background-color: #dc50ff;
+            background-color: #ba3ada;
         }
         
         #icono-nav {
@@ -178,7 +182,7 @@
         }
         
         #sobremi .sobremi h2 span {
-            color: #dc50ff;
+            color: #ba3ada;
         }
         
         #sobremi .sobremi h3 {
@@ -208,7 +212,7 @@
         }
         
         #sobremi .sobremi a:hover {
-            background-color: #dc50ff;
+            background-color: #ba3ada;
             color: #fff;
         }
         /* *********************/
@@ -424,7 +428,7 @@
             position: absolute;
             left: 0px;
             background-color: rgba(0, 0, 0, 0.8);
-            color: #dc50ff;
+            color: #ba3ada;
             width: 100%;
             padding: 10px;
             opacity: 0;
@@ -498,7 +502,7 @@
         }
         
         #contacto .btn-enviar:hover {
-            background-color: #dc50ff;
+            background-color: #ba3ada;
             color: #fff;
         }
         /* *********************/
