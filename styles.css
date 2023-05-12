@@ -456,7 +456,7 @@
         }
         
         #contacto .titulo-seccion {
-            margin-bottom: 20px;
+            margin-bottom: 75px;
         }
         
         #contacto .contenedor-form {
@@ -496,7 +496,7 @@
             color: #111135;
             text-decoration: underline;
             text-decoration-color: #d3d3d3;
-            text-decoration-thickness: 5px;
+            text-decoration-thickness: 4px;
         }
         
         #contacto .btn-enviar {
