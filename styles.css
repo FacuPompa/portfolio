@@ -172,6 +172,12 @@
             text-decoration-color: #d3d3d3;
             text-decoration-thickness: 5px;
         }
+
+        #sobremi .sobremi p a {
+            font-weight: bold;
+            color: #565656;
+        }
+
         
         #sobremi .sobremi h2 {
             font-size: 34px;
