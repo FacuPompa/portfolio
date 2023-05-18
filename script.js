@@ -74,4 +74,3 @@ function sendForm(event) {
     // Envía el formulario
     formulario.submit();
 }
-
