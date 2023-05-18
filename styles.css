@@ -42,7 +42,7 @@
             font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
-            color: #ba3ada;
+            color: #2780e6;
         }
         
         #inicio .contenido header .contenido-header nav ul {
@@ -57,10 +57,16 @@
             margin: 0 12px;
             font-weight: 400;
             transition: .5s;
+            
         }
+
         
         #inicio .contenido header .contenido-header nav ul li a:hover {
-            color: #ba3ada;
+            color: #2780e6;
+        }
+
+        #inicio .contenido header .contenido-header nav ul li a .icono-nav {
+            color: #fff;
         }
         
         #inicio .contenido header .contenido-header .redes-nav, .redes-footer a {
@@ -71,12 +77,13 @@
             transition: .5s;
         }
         
-        #inicio .contenido header .contenido-header .redes-nav,  a:hover {
-            color: #ba3ada;
+        #inicio .contenido header .contenido-header .redes-nav a:hover {
+            color: #2780e6;
         }
         
+
         #inicio .contenido header .contenido-header .seleccionado {
-            color: #ba3ada;
+            color: #2780e6;
         }
         
         #inicio .contenido .presentacion {
@@ -105,7 +112,7 @@
         
         #inicio .contenido .presentacion h2 span {
             font-size: 55px;
-            color: #ba3ada;
+            color: #2780e6;
         }
         
         #inicio .contenido .presentacion .descripcion {
@@ -129,11 +136,11 @@
         }
         
         #inicio .contenido .presentacion a:hover {
-            background-color: #ba3ada;
+            background-color: #2780e6;
         }
         
         #icono-nav {
-            color: #fff;
+            color: #2780e6;
             display: none;
         }
         /* *********************/
@@ -187,7 +194,7 @@
         }
         
         #sobremi .sobremi h2 span {
-            color: #ba3ada;
+            color: #2780e6;
         }
         
         #sobremi .sobremi h3 {
@@ -218,7 +225,7 @@
         }
         
         #sobremi .sobremi button:hover {
-            background-color: #ba3ada;
+            background-color: #2780e6;
             color: #fff;
         }
         /* *********************/
@@ -299,7 +306,7 @@
         /* *********************/
         
         .contenedor-skills {
-            background: linear-gradient( #ce5aebcc, rgba(33, 16, 16, 0.8)), url("img/fondo-skills.jpg");
+            background: linear-gradient( #5a88ebcc, rgba(33, 16, 16, 0.8)), url("img/fondo-skills.jpg");
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
@@ -434,7 +441,7 @@
             position: absolute;
             left: 0px;
             background-color: rgba(0, 0, 0, 0.8);
-            color: #ba3ada;
+            color: #2780e6;
             width: 100%;
             padding: 10px;
             opacity: 0;
@@ -508,7 +515,7 @@
         }
         
         #contacto .btn-enviar:hover {
-            background-color: #ba3ada;
+            background-color: #2780e6;
             color: #fff;
         }
         /* *********************/
