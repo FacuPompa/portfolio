@@ -122,7 +122,7 @@ export const translations = {
       description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out."
     },
     footer: {
-      copyright: "All rights reserved."
+      copyright: "Designed in the Third Impact by Facundo Pompa. Deployed on a budget."
     }
   },
   es: {
@@ -147,7 +147,7 @@ export const translations = {
       description: "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de un equipo increíble. No dudes en contactarme."
     },
     footer: {
-      copyright: "Todos los derechos reservados."
+      copyright: "Diseñado en el Tercer Impacto por Facundo Pompa. Desplegado con un presupuesto limitado."
     }
   }
 };

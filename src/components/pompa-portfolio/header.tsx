@@ -53,13 +53,13 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-4 z-50 w-full transition-all duration-300",
-        isScrolled ? " " : ""
+        "sticky top-4 z-50 w-full transition-all duration-300 bg",
+        isScrolled ? "" : ""
       )}
     >
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="flex items-center space-x-2">
-          <span className="font-headline text-xl font-bold hover:text-accent">{`{Fp}`}</span>
+          <span className="font-headline text-xl font-bold hover:text-primary relative px-3 py-1 rounded-lg bg-background/80 backdrop-blur-sm border border-border/40">{`{Fp}`}</span>
         </Link>
         
         <nav className="hidden items-center space-x-2 rounded-full border border-border/40 bg-background/95 p-2 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:flex mx-auto">
@@ -68,7 +68,7 @@ export function Header() {
               key={link.name}
               href={link.href}
               data-active={activeSection === link.href.substring(1)}
-              className="rounded-full px-4 py-2 text-sm font-medium text-foreground/60 transition-colors hover:text-foreground data-[active=true]:bg-muted data-[active=true]:text-foreground"
+              className="rounded-full px-4 py-2 text-sm font-medium text-foreground/60 transition-colors hover:text-foreground data-[active=true]:bg-muted data-[active=true]:text-foreground data-[active=true]:border data-[active=true]:border-border"
             >
               {link.name}
             </Link>

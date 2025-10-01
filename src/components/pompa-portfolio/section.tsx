@@ -20,10 +20,15 @@ type SectionTitleProps = {
   className?: string;
 };
 
-export function SectionTitle({ children, className }: SectionTitleProps) {
-    return (
-        <h2 className={cn("text-3xl font-headline font-bold text-center mb-12 md:text-4xl", className)}>
+export const SectionTitle = ({ children, className }: { children: React.ReactNode, className?: string }) => (
+  <div className={cn("relative my-16 md:my-24", className)}>
+    <div className="absolute inset-0 flex items-center" aria-hidden="true">
+        <div className="w-full border-t-2 border-border" />
+    </div>
+    <div className="relative flex justify-center">
+        <h2 className="font-headline bg-background px-6 text-center text-2xl md:text-3xl uppercase tracking-wider text-muted-foreground">
             {children}
         </h2>
-    );
-}
+    </div>
+  </div>
+);

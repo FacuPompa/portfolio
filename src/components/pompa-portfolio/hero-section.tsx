@@ -25,14 +25,14 @@ export function HeroSection() {
                         alt={avatarImage.description} 
                         width={400} 
                         height={400} 
-                        className="rounded-full object-cover aspect-square"
+                        className="rounded-full object-cover aspect-square border transition-all duration-300 hover:border-primary hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1"
                         data-ai-hint={avatarImage.imageHint}
                         priority
                     />
                 )}
             </div>
             <div className="max-w-3xl space-y-6 text-center lg:text-left">
-            <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary">
+            <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl uppercase tracking-widest text-primary drop-shadow-[0_0_10px_hsl(var(--primary))]">
                 {t.greeting}
             </h1>
             <p className="text-lg md:text-xl text-foreground/80">

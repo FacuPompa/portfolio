@@ -33,7 +33,7 @@ export function ProjectCard({
   const t = translations[language].projects;
 
   return (
-    <Card className="flex flex-col overflow-hidden h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    <Card className="flex flex-col overflow-hidden h-full transition-all duration-300 hover:border-primary hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
       <CardHeader>
         <div className="aspect-video relative mb-4">
           <Image
@@ -50,7 +50,7 @@ export function ProjectCard({
       <CardContent className="flex-grow">
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech) => (
-            <Badge key={tech} variant="secondary">
+            <Badge key={tech} variant="outline" className="text-sm">
               {tech}
             </Badge>
           ))}

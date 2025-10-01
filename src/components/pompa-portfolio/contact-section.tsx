@@ -13,7 +13,7 @@ export function ContactSection() {
 
   return (
     <Section id="contact">
-        <div className="max-w-xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
             <SectionTitle>{t.title}</SectionTitle>
             <p className="mt-4 text-lg text-muted-foreground mb-8">
                 {t.description}
