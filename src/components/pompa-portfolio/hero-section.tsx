@@ -18,9 +18,9 @@ export function HeroSection() {
     const evangelionTitles = t.evangelionTitles;
 
   return (
-    <section id="home" className="relative w-full h-[calc(100dvh-4rem)] min-h-[500px] flex items-center justify-center text-center -mt-16">
+    <section id="home" className="relative w-full h-[calc(100dvh-4rem)] min-h-[500px] flex items-center justify-center text-center -mt-16 md:mt-0">
       <div className="container px-4 md:px-6">
-        <div className="grid gap-10 lg:grid-cols-2 items-center">
+        <div className="grid gap-10 lg:gap-10 lg:grid-cols-2 items-center pt-48 md:pt-0">
             <div className="flex justify-center">
                 {avatarImage && (
                     <Image 

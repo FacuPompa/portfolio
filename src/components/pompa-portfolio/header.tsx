@@ -53,8 +53,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-4 z-50 w-full transition-all duration-300 bg",
-        isScrolled ? "" : ""
+        "sticky top-4 z-50 w-full transition-all duration-300 md:bg-transparent",
+        isScrolled ? "md:bg-transparent fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-sm border-b border-border/40 md:border-none" : "md:bg-transparent fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-sm md:backdrop-blur-none"
       )}
     >
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
@@ -62,7 +62,7 @@ export function Header() {
           <span className="font-headline text-xl font-bold hover:text-primary relative px-3 py-1 rounded-lg bg-background/80 backdrop-blur-sm border border-border/40">{`{Fp}`}</span>
         </Link>
         
-        <nav className="hidden items-center space-x-2 rounded-full border border-border/40 bg-background/95 p-2 backdrop-blur supports-[backdrop-filter]:bg-background/60 md:flex mx-auto">
+        <nav className="hidden items-center space-x-2 rounded-full border border-border/40 bg-background/60 p-2 backdrop-blur-sm md:flex mx-auto">
           {currentNavLinks.map((link) => (
             <Link
               key={link.name}
