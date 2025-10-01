@@ -6,6 +6,14 @@ import { ThemeProvider } from '@/components/theme-provider';
 export const metadata: Metadata = {
   title: 'PompDev - Portfolio',
   description: "Facundo Pompa's portfolio.",
+  icons: {
+    icon: [
+      {
+        url: '/01.png',
+        href: '/01.png',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

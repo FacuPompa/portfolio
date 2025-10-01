@@ -17,7 +17,7 @@ type ProjectCardProps = {
   imageUrl: string;
   imageHint: string;
   githubUrl: string;
-  liveUrl: string;
+  liveUrl?: string;
 };
 
 export function ProjectCard({

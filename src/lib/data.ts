@@ -2,31 +2,45 @@ import {
   Github,
   Linkedin,
   Mail,
-  Code,
+  FileJson,
+  FileCode,
+  Layers,
+  Boxes,
   Server,
+  Briefcase,
+  FileType,
+  Palette,
   Database,
-  TerminalSquare,
+  Hash,
+  Box,
+  Coffee,
+  GitBranch,
   type LucideIcon,
 } from "lucide-react";
 import { PlaceHolderImages } from "./placeholder-images";
 import type { Language } from "@/context/language-context";
 
 export const navLinks = (lang: Language) => [
-  { name: lang === 'en' ? "Home" : "Inicio", href: "#home" },
-  { name: lang === 'en' ? "About Me" : "Sobre Mí", href: "#about" },
-  { name: lang === 'en' ? "Work" : "Proyectos", href: "#projects" },
-  { name: lang === 'en' ? "Contact" : "Contacto", href: "#contact" },
+  { name: lang === 'en' ? "Central Dogma" : "Dogma Central", href: "#home" },
+  { name: lang === 'en' ? "Pilot Profile" : "Perfil del Piloto", href: "#about" },
+  { name: lang === 'en' ? "MAGI System Projects" : "Proyectos del sistema MAGI", href: "#projects" },
+  { name: lang === 'en' ? "Neural Link" : "Enlace Neural", href: "#contact" },
 ];
 
 export const skills = [
-  { name: "TypeScript", icon: Code },
-  { name: "React", icon: Code },
-  { name: "Next.js", icon: Code },
+  { name: "HTML5", icon: FileType },
+  { name: "CSS3", icon: Palette },
+  { name: "JavaScript", icon: FileCode },
+  { name: "GIT", icon: GitBranch },
+  { name: "React", icon: Layers },
+  { name: "Next.js", icon: Boxes },
   { name: "Node.js", icon: Server },
-  { name: "Python", icon: Code },
+  { name: "Python", icon: Briefcase },
+  { name: "TypeScript", icon: FileJson },
+  { name: "C#", icon: Hash },
+  { name: ".NET", icon: Box },
   { name: "SQL", icon: Database },
-  { name: "C#", icon: Code },
-  { name: ".NET", icon: Server },
+  { name: "Java", icon: Coffee },
 ];
 
 const projectImage1 = PlaceHolderImages.find(p => p.id === 'project-1');
@@ -57,6 +71,7 @@ export const projects = (lang: Language) => [
     githubUrl: "https://github.com/FacuPompa/Nier-Invaders",
     liveUrl: "https://nier-invaders-824r2vb34-facupompas-projects.vercel.app/",
   },
+  
   {
     title: "Chess Game",
     description: lang === 'en'
@@ -103,51 +118,65 @@ export const translations = {
   en: {
     hero: {
       greeting: "Facundo Pompa",
-      bio: "A passionate developer and creator, building innovative solutions with a keen eye for design and a drive for excellence.",
+      bio: "A passionate FullStack Developer and creator, building innovative solutions with a keen eye for design and a drive for excellence.",
       contactButton: "Get in Touch",
-      projectsButton: "View My Work"
+      projectsButton: "View My Work",
+      evangelionTitles: [
+        "Episode I: Developer Genesis",
+        "Episode II: The Beast That Shouted AI at the Heart of the World",
+        "Episode III: You Can (Not) Debug",
+        "Episode IV: Those Who Code Advance",
+        "Episode V: The Beginning and the End of Code"
+      ]
     },
     about: {
-      title: "About Me",
+      title: "Pilot Profile",
       p1: "I am a dedicated and passionate developer with a strong foundation in both front-end and back-end technologies. My journey in software development is driven by a desire to solve complex problems and create meaningful, user-centric applications.",
       p2: "From personal passion projects to academic coursework, I have consistently pushed the boundaries of my knowledge, embracing new challenges and technologies. I thrive in collaborative environments and am committed to writing clean, efficient, and scalable code.",
-      skillsetTitle: "My Skillset"
+      skillsetTitle: "A.T Field Capabilities"
     },
     projects: {
-      title: "My Projects",
+      title: "MAGI System Projects",
       liveDemo: "Visit"
     },
     contact: {
-      title: "Let's Connect",
+      title: "Neural Link",
       description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out."
     },
     footer: {
-      copyright: "Designed in the Third Impact by Facundo Pompa. Deployed on a budget."
+      copyright: "Developed in Terminal Dogma. Deployed during the Third Impact."
     }
   },
   es: {
     hero: {
       greeting: "Facundo Pompa",
-      bio: "Un desarrollador y creador apasionado, construyendo soluciones innovadoras con un buen ojo para el diseño y un impulso por la excelencia.",
+      bio: "Un Desarrollador FullStack y creador apasionado, construyendo soluciones innovadoras con un buen ojo para el diseño y un impulso por la excelencia.",
       contactButton: "Contáctame",
-      projectsButton: "Ver Mis Proyectos"
+      projectsButton: "Ver Mis Proyectos",
+      evangelionTitles: [
+        "Episodio I: Génesis del Desarrollador",
+        "Episodio II: La Bestia que Gritó IA en el Corazón del Mundo",
+        "Episodio III: No Puedes (No) Depurar",
+        "Episodio IV: Aquellos que Programan Avanzan",
+        "Episodio V: El Principio y el Fin del Código"
+      ]
     },
     about: {
-      title: "Sobre Mí",
+      title: "Perfil del piloto",
       p1: "Soy un desarrollador dedicado y apasionado con una sólida base en tecnologías tanto de front-end como de back-end. Mi viaje en el desarrollo de software está impulsado por el deseo de resolver problemas complejos y crear aplicaciones significativas y centradas en el usuario.",
       p2: "Desde proyectos personales por pasión hasta trabajos académicos, he superado constantemente los límites de mi conocimiento, aceptando nuevos desafíos y tecnologías. Prospero en entornos colaborativos y estoy comprometido a escribir código limpio, eficiente y escalable.",
-      skillsetTitle: "Mis Habilidades"
+      skillsetTitle: "Capacidades del campo A.T"
     },
     projects: {
-      title: "Mis Proyectos",
+      title: "Proyectos del sistema MAGI",
       liveDemo: "Visitar"
     },
     contact: {
-      title: "Conectemos",
+      title: "Enlace Neural",
       description: "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de un equipo increíble. No dudes en contactarme."
     },
     footer: {
-      copyright: "Diseñado en el Tercer Impacto por Facundo Pompa. Desplegado con un presupuesto limitado."
+      copyright: "Desarrollado en Terminal Dogma. Desplegado durante el Tercer Impacto."
     }
   }
 };
