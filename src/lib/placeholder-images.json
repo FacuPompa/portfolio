@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "project-1",
+      "description": "A preview of the Hangman Game project.",
+      "imageUrl": "https://i.imgur.com/qzl3kHV.png",
+      "imageHint": "hangman game"
+    },
+    {
+      "id": "project-2",
+      "description": "A preview of the Nier Invaders project.",
+      "imageUrl": "https://i.imgur.com/oX5oHEC.jpeg",
+      "imageHint": "gameplay screenshot"
+    },
+    {
+      "id": "project-3",
+      "description": "A preview of the Chess Game project.",
+      "imageUrl": "https://i.imgur.com/DZCChwX.jpeg",
+      "imageHint": "chess board"
+    },
+    {
+      "id": "project-4",
+      "description": "A preview of the RAWG Browser project.",
+      "imageUrl": "https://i.imgur.com/U1lSxGl.jpeg",
+      "imageHint": "game search interface"
+    },
+    {
+      "id": "hero-avatar",
+      "description": "A picture of Facundo Pompa",
+      "imageUrl": "https://i.imgur.com/7vKqcWu.jpeg",
+      "imageHint": "profile picture"
+    }
+  ]
+}
