@@ -104,7 +104,7 @@ export const contactLinks: { name: string; url: string; icon: LucideIcon }[] = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/facundo-pompa-a25570357/",
+    url: "https://www.linkedin.com/in/facundo-pompa/",
     icon: Linkedin,
   },
   {
