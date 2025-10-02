@@ -23,7 +23,7 @@ export function HeroSection() {
         <div className="grid gap-10 lg:gap-10 lg:grid-cols-2 items-center pt-48 md:pt-0">
             <div className="flex justify-center">
                 {avatarImage && (
-                    <Image 
+                    <Image
                         src={avatarImage.imageUrl} 
                         alt={avatarImage.description} 
                         width={400} 
