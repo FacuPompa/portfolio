@@ -27,7 +27,7 @@
     {
       "id": "hero-avatar",
       "description": "A picture of Facundo Pompa",
-      "imageUrl": "https://i.imgur.com/7vKqcWu.jpeg",
+      "imageUrl": "/images/facundo-pompa.jpg",
       "imageHint": "profile picture"
     }
   ]
