@@ -89,7 +89,7 @@ export const translations = {
       title: 'Educación y certificaciones',
       timelineItems: [
         {
-          period: '2024 — 2027 (estimado)',
+          period: '2024 - 2027 (estimado)',
           title: 'Tecnicatura Universitaria en Desarrollo Web',
           place: 'Universidad Nacional de San Luis',
           description: 'Formación universitaria orientada al desarrollo web.',
@@ -234,7 +234,7 @@ export const translations = {
       title: 'Education and certifications',
       timelineItems: [
         {
-          period: '2024 — 2027 (estimated)',
+          period: '2024 - 2027 (estimated)',
           title: 'University Technical Degree in Web Development',
           place: 'Universidad Nacional de San Luis',
           description: 'University-level web development programme.',
