@@ -6,10 +6,11 @@
     <meta name="theme-color" content="#0b0c0e" />
     <meta
       name="description"
-      content="Portfolio de Facundo Pompa, desarrollador de software junior especializado en interfaces web con React y en formación backend con Java."
+      content="Portfolio de Facundo Pompa, desarrollador de software especializado en interfaces web con React y en formación backend con Java."
     />
     <meta name="author" content="Facundo Pompa" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Portfolio de Facundo Pompa" />
     <meta property="og:title" content="Facundo Pompa — Desarrollador de software" />
     <meta
       property="og:description"
@@ -17,11 +18,50 @@
     />
     <meta property="og:locale" content="es_AR" />
     <meta name="twitter:card" content="summary" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="twitter:title" content="Facundo Pompa — Desarrollador de software" />
+    <meta
+      name="twitter:description"
+      content="Proyectos web, aplicaciones con React y aprendizaje backend con Java."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Facundo Pompa",
+        "alternateName": "@FacuPompa",
+        "jobTitle": "Desarrollador web",
+        "description": "Desarrollador web enfocado en React y en formación backend con Java y Spring.",
+        "sameAs": [
+          "https://github.com/FacuPompa",
+          "https://www.linkedin.com/in/facundo-pompa/"
+        ],
+        "knowsAbout": [
+          "React",
+          "TypeScript",
+          "Java",
+          "Spring Boot",
+          "PostgreSQL"
+        ]
+      }
+    </script>
     <title>Facundo Pompa — Desarrollador de software</title>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <main style="max-width: 720px; margin: 64px auto; padding: 0 24px; font-family: Georgia, serif; line-height: 1.65;">
+        <h1>Facundo Pompa</h1>
+        <p>Desarrollador web enfocado en React y en formación backend con Java y Spring.</p>
+        <p>Este portfolio utiliza JavaScript para mostrar los proyectos, las galerías y el contenido bilingüe.</p>
+        <p>
+          Podés consultar mi trabajo en
+          <a href="https://github.com/FacuPompa">GitHub</a>
+          o mi perfil profesional en
+          <a href="https://www.linkedin.com/in/facundo-pompa/">LinkedIn</a>.
+        </p>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

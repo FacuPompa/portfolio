@@ -1,6 +1,6 @@
 # Portfolio profesional — Facundo Pompa
 
-Portfolio bilingüe desarrollado con React, TypeScript y Vite. El proyecto prioriza contenido verificable, accesibilidad, performance y una estética editorial oscura sin depender de una librería de animaciones o partículas.
+Portfolio desarrollado con React, TypeScript y Vite. El proyecto prioriza contenido verificable, accesibilidad, performance y una estética editorial oscura sin depender de ninguna librería.
 
 ## Ejecutar localmente
 
@@ -19,23 +19,12 @@ pnpm preview
 
 ## Arquitectura
 
-- `src/content.ts`: contenido completo en español e inglés.
+- `src/content.ts`: contenido visible del portfolio en español e inglés.
 - `src/context`: idioma y tema, ambos persistidos en `localStorage`.
-- `src/components`: navegación, fondo, formulario y vistas de proyectos.
+- `src/components`: encabezado, galería de proyectos, tecnologías y fondo animado.
 - `src/styles.css`: sistema visual, breakpoints y preferencias de movimiento reducido.
-- `public/Facundo-Pompa-CV.pdf`: archivo descargable desde el sitio.
-
-## Formulario de contacto
-
-La implementación actual valida los campos y abre el cliente de correo del visitante mediante `mailto:`. No simula un envío ni almacena información.
-
-Para recibir mensajes sin depender del cliente de correo, las alternativas más razonables son:
-
-- **Formspree**: la integración más rápida para un sitio estático; requiere crear el formulario y usar su identificador.
-- **EmailJS**: envía desde el navegador mediante un servicio y una plantilla configurados en su panel.
-- **Resend + función serverless**: ofrece más control y mantiene la API key fuera del frontend, pero requiere un endpoint y un dominio de envío verificado.
-
-No se incluyó ninguna de estas integraciones porque necesitan una cuenta y credenciales del propietario.
+- `public`: CV, favicon, retrato, logos y capturas originales que Vite copia al compilar.
+- `dist`: salida generada por `pnpm build`; no se versiona ni se edita manualmente.
 
 ## Decisiones de diseño
 

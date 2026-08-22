@@ -26,12 +26,13 @@ export function Starfield() {
 
     const createStars = () => {
       const isMobile = window.innerWidth < 700
-      const count = Math.min(isMobile ? 38 : 78, Math.floor((window.innerWidth * window.innerHeight) / 18000))
+      const areaCount = Math.floor((window.innerWidth * window.innerHeight) / 12000)
+      const count = Math.min(isMobile ? 46 : 96, Math.max(isMobile ? 30 : 58, areaCount))
       stars = Array.from({ length: count }, () => ({
         x: Math.random(),
         y: Math.random(),
-        radius: 0.45 + Math.random() * 1.05,
-        alpha: 0.12 + Math.random() * 0.4,
+        radius: 0.5 + Math.random() * 0.8,
+        alpha: 0.1 + Math.random() * 0.22,
         phase: Math.random() * Math.PI * 2,
         speed: 0.0015 + Math.random() * 0.0025,
       }))

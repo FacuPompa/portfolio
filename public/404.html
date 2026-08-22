@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#181818" />
+    <meta name="description" content="La página solicitada no existe en el portfolio de Facundo Pompa." />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>Página no encontrada — Facundo Pompa</title>
+    <style>
+      :root {
+        color: #f1eee7;
+        background: #181818;
+        font-family: Georgia, serif;
+        color-scheme: dark;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        display: grid;
+        margin: 0;
+        place-items: center;
+      }
+
+      main {
+        width: min(620px, calc(100% - 40px));
+        padding: 42px;
+        border: 1px solid #4a4d50;
+        border-radius: 9px;
+        background: #1d1d1e;
+      }
+
+      p { color: #aaa79f; line-height: 1.7; }
+      h1 { margin: 0; font-size: clamp(2rem, 8vw, 3.25rem); }
+
+      a {
+        display: inline-block;
+        margin-top: 18px;
+        color: #f1eee7;
+        font-family: "Segoe UI", sans-serif;
+        text-underline-offset: 0.25em;
+      }
+
+      .code {
+        margin-bottom: 8px;
+        color: #9bb2c2;
+        font: 700 0.82rem "Segoe UI", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="code">ERROR 404</p>
+      <h1>Esta página no existe.</h1>
+      <p>El enlace puede haber cambiado o la dirección puede estar incompleta. Podés volver al portfolio y continuar desde allí.</p>
+      <a id="home-link" href="/">Volver al portfolio</a>
+    </main>
+    <script>
+      const pathParts = window.location.pathname.split('/').filter(Boolean)
+      const isProjectPages = window.location.hostname.endsWith('github.io') && pathParts.length > 0
+      document.getElementById('home-link').href = isProjectPages ? `/${pathParts[0]}/` : '/'
+    </script>
+  </body>
+</html>

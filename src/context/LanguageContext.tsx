@@ -14,8 +14,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     localStorage.setItem('portfolio-language', language)
     document.documentElement.lang = language
-    document.title = translations[language].seo.title
-    document.querySelector('meta[name="description"]')?.setAttribute('content', translations[language].seo.description)
+    const { title, description } = translations[language].seo
+    document.title = title
+    document.querySelector('meta[name="description"]')?.setAttribute('content', description)
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', title)
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', description)
+    document.querySelector('meta[property="og:locale"]')?.setAttribute('content', language === 'es' ? 'es_AR' : 'en_US')
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', title)
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', description)
   }, [language])
 
   const value = useMemo(

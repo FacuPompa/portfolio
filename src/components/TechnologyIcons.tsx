@@ -1,32 +1,25 @@
-import { Database, Layers3, Network, Webhook, Workflow } from 'lucide-react'
+import { Bot, Database, Layers3 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
-import { motion } from 'motion/react'
+import type { CSSProperties } from 'react'
 import type { IconType } from 'react-icons'
 import {
-  SiC,
   SiArchlinux,
   SiCss,
   SiDocker,
-  SiDotnet,
   SiGit,
   SiGithub,
   SiHtml5,
   SiJavascript,
-  SiNetlify,
   SiNotion,
   SiObsidian,
   SiOpencode,
-  SiPostgresql,
   SiPython,
   SiReact,
   SiTailwindcss,
   SiTypescript,
-  SiVercel,
 } from 'react-icons/si'
-import { TbBrandCSharp } from "react-icons/tb";
-import { BiLogoSpringBoot } from "react-icons/bi";
+import { BiLogoPostgresql, BiLogoSpringBoot } from 'react-icons/bi'
 import { FaJava } from 'react-icons/fa'
-import { AiOutlineOpenAI } from 'react-icons/ai'
 
 type TechnologyIcon = IconType | LucideIcon
 
@@ -40,46 +33,40 @@ const technologyIcons: Record<string, TechnologyIcon> = {
   Java: FaJava,
   'Java 21': FaJava,
   'Spring Boot': BiLogoSpringBoot,
-  'C#': TbBrandCSharp,
-  '.NET': SiDotnet,
   Python: SiPython,
-  C: SiC,
   Git: SiGit,
   GitHub: SiGithub,
-  PostgreSQL: SiPostgresql,
+  PostgreSQL: BiLogoPostgresql,
   Docker: SiDocker,
-  Vercel: SiVercel,
-  Netlify: SiNetlify,
   Notion: SiNotion,
   Obsidian: SiObsidian,
   'Arch Linux': SiArchlinux,
-  Codex: AiOutlineOpenAI,
+  Codex: Bot,
   OpenCode: SiOpencode,
-  'REST APIs': Webhook,
-  'REST API': Webhook,
-  POO: Network,
-  OOP: Network,
-  Streams: Workflow,
   'Context API': Layers3,
 }
 
-function getTechnologyTone(technology: string) {
-  if (['React', 'TypeScript', 'REST APIs', 'Context API'].includes(technology)) return 'cyan'
-  if (['Java', 'Java 21', 'Spring Boot', 'C#', '.NET', 'C', 'POO', 'OOP', 'Streams'].includes(technology)) return 'orange'
-  if (['HTML5', 'CSS3', 'JavaScript', 'Tailwind CSS'].includes(technology)) return 'violet'
-  if (['PostgreSQL', 'Docker', 'Git', 'GitHub', 'Vercel', 'Netlify', 'Notion', 'Obsidian', 'Arch Linux'].includes(technology)) return 'blue'
-  if (['Codex', 'OpenCode', 'Python'].includes(technology)) return 'mint'
-  return 'neutral'
-}
-
-const listVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.035 } },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 8 },
-  visible: { opacity: 1, y: 0 },
+const technologyColors: Record<string, string> = {
+  HTML5: '#e34f26',
+  CSS3: '#1572b6',
+  JavaScript: '#f7df1e',
+  TypeScript: '#3178c6',
+  React: '#61dafb',
+  'Tailwind CSS': '#06b6d4',
+  Java: '#f89820',
+  'Java 21': '#f89820',
+  'Spring Boot': '#6db33f',
+  Python: '#3776ab',
+  Git: '#f05032',
+  GitHub: '#f1eee7',
+  PostgreSQL: '#4169e1',
+  Docker: '#2496ed',
+  Notion: '#f1eee7',
+  Obsidian: '#a88bfa',
+  'Arch Linux': '#1793d1',
+  Codex: '#10a37f',
+  OpenCode: '#f1eee7',
+  'Context API': '#61dafb',
 }
 
 export function TechnologyIcons({
@@ -92,28 +79,21 @@ export function TechnologyIcons({
   variant?: 'stack' | 'project'
 }) {
   return (
-    <motion.ul
-      className={`technology-list technology-list--${variant}`}
-      aria-label={label}
-      variants={listVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-    >
+    <ul className={`technology-list technology-list--${variant}`} aria-label={label}>
       {items.map((item) => {
         const Icon = technologyIcons[item] ?? Database
+        const color = item === 'GitHub' || item === 'Notion' || item === 'OpenCode'
+          ? 'var(--monochrome-icon)'
+          : technologyColors[item] ?? '#9bb2c2'
         return (
-          <motion.li
-            className={`technology-item technology-item--${getTechnologyTone(item)}`}
-            variants={itemVariants}
-            whileHover={{ y: -2 }}
-            key={item}
-          >
-            <span className="technology-glyph" aria-hidden="true"><Icon size={17} /></span>
+          <li key={item} style={{ '--technology-color': color } as CSSProperties}>
+            <span className="technology-icon" aria-hidden="true">
+              <Icon size={variant === 'stack' ? 30 : 17} />
+            </span>
             <span className="technology-name">{item}</span>
-          </motion.li>
+          </li>
         )
       })}
-    </motion.ul>
+    </ul>
   )
 }
