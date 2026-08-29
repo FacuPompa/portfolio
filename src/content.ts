@@ -99,6 +99,14 @@ export const translations = {
         },
         {
           period: '2026',
+          title: 'Introduction to Agent Skills',
+          place: 'Anthropic',
+          description: 'Curso finalizado sobre diseño, configuración, distribución y diagnóstico de Skills para Claude Code.',
+          status: 'Finalizado',
+          logoAlt: 'Anthropic',
+        },
+        {
+          period: '2026',
           title: 'Java Spring Boot',
           place: 'Platzi',
           description: 'Curso finalizado de desarrollo backend con Java y Spring Boot.',
@@ -241,6 +249,14 @@ export const translations = {
           status: 'In progress',
           logo: '/logo-unsl.webp',
           logoAlt: 'Universidad Nacional de San Luis',
+        },
+        {
+          period: '2026',
+          title: 'Introduction to Agent Skills',
+          place: 'Anthropic',
+          description: 'Completed course on designing, configuring, distributing and troubleshooting Skills for Claude Code.',
+          status: 'Completed',
+          logoAlt: 'Anthropic',
         },
         {
           period: '2026',

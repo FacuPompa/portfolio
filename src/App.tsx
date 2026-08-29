@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ArrowUp, Check, ChevronDown, ChevronUp, Github, ExternalLink } from 'lucide-react'
-import { SiPlatzi } from 'react-icons/si'
+import { SiAnthropic, SiPlatzi } from 'react-icons/si'
 import { Header } from './components/Header'
 import { ProjectGallery } from './components/ProjectGallery'
 import { Starfield } from './components/Starfield'
@@ -105,6 +105,18 @@ const educationDrafts = {
       note: 'Formación universitaria para abordar de forma disciplinada y sistemática el análisis, desarrollo, evaluación e implantación de aplicaciones web.',
     },
     {
+      focus: 'Diseño de Skills para Claude Code',
+      topics: [
+        'Estructura de SKILL.md, frontmatter y coincidencia semántica',
+        'Skills personales, de proyecto y jerarquía de prioridad',
+        'Descripciones efectivas y restricción de herramientas con allowed-tools',
+        'Divulgación progresiva con referencias, scripts y assets',
+        'Distribución mediante Git, plugins y configuración administrada',
+        'Integración con subagentes y diagnóstico de problemas',
+      ],
+      note: 'Creación de flujos reutilizables para mantener a Claude consistente, eficiente en contexto y alineado con los estándares de un proyecto o equipo.',
+    },
+    {
       focus: 'Desarrollo de APIs con Spring Boot',
       topics: [
         'Configuración, perfiles y dependencias de Spring Boot',
@@ -201,6 +213,18 @@ const educationDrafts = {
         'Security, legislation and supervised technical practice',
       ],
       note: 'University programme for approaching the analysis, development, evaluation and implementation of web applications in a disciplined and systematic way.',
+    },
+    {
+      focus: 'Skill design for Claude Code',
+      topics: [
+        'SKILL.md structure, frontmatter and semantic matching',
+        'Personal and project Skills, and their priority hierarchy',
+        'Effective descriptions and tool restrictions with allowed-tools',
+        'Progressive disclosure through references, scripts and assets',
+        'Distribution through Git, plugins and managed settings',
+        'Custom subagent integration and troubleshooting',
+      ],
+      note: 'Creation of reusable workflows that keep Claude consistent, context-efficient and aligned with project or team standards.',
     },
     {
       focus: 'API development with Spring Boot',
@@ -453,10 +477,12 @@ function App() {
               <li className={index >= 3 ? 'education-card-reveal' : undefined} key={`${item.period}-${item.title}`}>
                 <article className="education-card">
                   <header className="education-card-header">
-                    <span className={`education-logo${item.place === 'Platzi' ? ' education-logo--platzi' : ''}`} role={item.place === 'Platzi' ? 'img' : undefined} aria-label={item.place === 'Platzi' ? item.logoAlt : undefined}>
+                    <span className={`education-logo${item.place === 'Platzi' ? ' education-logo--platzi' : item.place === 'Anthropic' ? ' education-logo--anthropic' : ''}`} role={item.place === 'Platzi' || item.place === 'Anthropic' ? 'img' : undefined} aria-label={item.place === 'Platzi' || item.place === 'Anthropic' ? item.logoAlt : undefined}>
                       {item.place === 'Platzi'
                         ? <SiPlatzi size={34} aria-hidden="true" />
-                        : <img src={item.logo} alt={item.logoAlt} loading="lazy" decoding="async" />}
+                        : item.place === 'Anthropic'
+                          ? <SiAnthropic size={34} aria-hidden="true" />
+                          : <img src={item.logo} alt={item.logoAlt} loading="lazy" decoding="async" />}
                     </span>
                     <div className="education-card-heading">
                       <div className="education-card-title-row">

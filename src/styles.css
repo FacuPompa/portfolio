@@ -997,6 +997,11 @@ strong {
   padding: 11px;
 }
 
+.education-logo--anthropic {
+  padding: 11px;
+  color: #181817;
+}
+
 .education-card-heading {
   min-width: 0;
 }
