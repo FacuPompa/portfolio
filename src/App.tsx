@@ -407,6 +407,14 @@ function App() {
                   <span className="project-status">{copy.building}</span>
                   <h3 id="umbral-title">{umbral.title}</h3>
                 </div>
+                {umbral.repository && (
+                  <div className="project-links">
+                    <a href={umbral.repository} target="_blank" rel="noreferrer">
+                      <Github size={17} aria-hidden="true" />
+                      {copy.openCode}
+                    </a>
+                  </div>
+                )}
               </header>
               <p className="project-description">{umbral.description}</p>
               <p className="project-outcome"><strong>{copy.objective}.</strong> {copy.umbralObjective}</p>

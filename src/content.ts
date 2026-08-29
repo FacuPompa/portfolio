@@ -11,6 +11,9 @@ type Project = {
 }
 
 const sharedProjects = {
+  umbral: {
+    repository: 'https://github.com/FacuPompa/Umbral',
+  },
   rawg: {
     technologies: ['React', 'Tailwind CSS', 'Context API'],
     repository: 'https://github.com/FacuPompa/rawg-browser',
@@ -66,6 +69,7 @@ export const translations = {
           description:
             'Aplicación full stack para compartir experiencias sobre videojuegos narrativos sin recibir spoilers de partes todavía no jugadas.',
           technologies: ['React', 'Java', 'Spring Boot', 'PostgreSQL'],
+          ...sharedProjects.umbral,
         },
         {
           id: 'rawg',
@@ -219,6 +223,7 @@ export const translations = {
           description:
             'A full-stack application for sharing experiences about narrative games without seeing spoilers from parts not yet played.',
           technologies: ['React', 'Java', 'Spring Boot', 'PostgreSQL'],
+          ...sharedProjects.umbral,
         },
         {
           id: 'rawg',
