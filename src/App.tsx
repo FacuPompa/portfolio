@@ -409,6 +409,7 @@ function App() {
               <header className="project-heading">
                 <div>
                   <h3 id="umbral-title">{umbral.title}</h3>
+                  <p className="project-description">{umbral.description}</p>
                 </div>
                 <div className="project-links">
                   {umbral.demo && (
@@ -425,7 +426,6 @@ function App() {
                   )}
                 </div>
               </header>
-              <p className="project-description">{umbral.description}</p>
               <p className="project-outcome">{umbral.outcome}</p>
               <TechnologyIcons items={umbral.technologies} label={`${copy.technologies}: ${umbral.title}`} variant="project" />
 
