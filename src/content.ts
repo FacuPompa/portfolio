@@ -13,6 +13,7 @@ type Project = {
 const sharedProjects = {
   umbral: {
     repository: 'https://github.com/FacuPompa/Umbral',
+    demo: 'https://umbral-facupompa.netlify.app/',
   },
   rawg: {
     technologies: ['React', 'Tailwind CSS', 'Context API'],
@@ -67,8 +68,10 @@ export const translations = {
           id: 'umbral',
           title: 'Umbral',
           description:
-            'Aplicación full stack para compartir experiencias sobre videojuegos narrativos sin recibir spoilers de partes todavía no jugadas.',
-          technologies: ['React', 'Java', 'Spring Boot', 'PostgreSQL'],
+            'Comunidad full stack para conversar, preguntar y responder sobre videojuegos narrativos sin exponer avances que cada persona todavía no alcanzó.',
+          outcome:
+            'El backend filtra cada publicación según el checkpoint guardado del usuario. Incluye autenticación, moderación de juegos sugeridos y respuestas en hilo.',
+          technologies: ['React', 'Java', 'Spring Boot', 'PostgreSQL', 'Flyway', 'Docker'],
           ...sharedProjects.umbral,
         },
         {
@@ -221,8 +224,10 @@ export const translations = {
           id: 'umbral',
           title: 'Umbral',
           description:
-            'A full-stack application for sharing experiences about narrative games without seeing spoilers from parts not yet played.',
-          technologies: ['React', 'Java', 'Spring Boot', 'PostgreSQL'],
+            'A full-stack community for discussing, asking about and replying to narrative games without exposing story progress a person has not yet reached.',
+          outcome:
+            'The backend filters every post against the user’s saved checkpoint. It includes authentication, moderation for suggested games and threaded replies.',
+          technologies: ['React', 'Java', 'Spring Boot', 'PostgreSQL', 'Flyway', 'Docker'],
           ...sharedProjects.umbral,
         },
         {

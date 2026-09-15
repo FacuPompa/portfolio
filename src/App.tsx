@@ -9,14 +9,10 @@ import { useLanguage } from './context/language-context'
 
 const editorialCopy = {
   es: {
-    building: 'En construcción',
-    developmentNote:
-      'Interfaz en desarrollo. Umbral todavía no tiene un frontend público.',
-    objective: 'Objetivo del proyecto',
-    umbralObjective:
-      'Diseñar la lógica anti-spoiler en Spring para que cada lector reciba contenido acorde al progreso que alcanzó.',
     technologies: 'Tecnologías',
     evidence: 'Evidencia del proyecto',
+    umbralHomeCaption: 'Landing de Umbral: catálogo y acceso a una comunidad sin spoilers.',
+    umbralDetailCaption: 'Detalle de juego: el progreso define qué conversaciones se habilitan.',
     rawgMainCaption: 'Portada de RAWG Browser: búsqueda y juegos populares.',
     rawgTrendsCaption: 'Vista de tendencias.',
     rawgMobileCaption: 'Adaptación móvil.',
@@ -49,14 +45,10 @@ const editorialCopy = {
     },
   },
   en: {
-    building: 'In progress',
-    developmentNote:
-      'Interface in development. Umbral does not have a public frontend yet.',
-    objective: 'Project goal',
-    umbralObjective:
-      'Design the anti-spoiler logic in Spring so each reader receives content that matches the progress they have reached.',
     technologies: 'Technologies',
     evidence: 'Project evidence',
+    umbralHomeCaption: 'Umbral landing page: catalogue and access to a spoiler-safe community.',
+    umbralDetailCaption: 'Game detail: saved progress determines which conversations are available.',
     rawgMainCaption: 'RAWG Browser home: search and popular games.',
     rawgTrendsCaption: 'Trending games view.',
     rawgMobileCaption: 'Mobile adaptation.',
@@ -325,6 +317,18 @@ function App() {
   const tools = t.about.stackGroups[3].items
   const educationDetails = educationDrafts[language]
   const visibleEducation = showAllEducation ? t.education.timelineItems : t.education.timelineItems.slice(0, 3)
+  const umbralImages = [
+    {
+      src: '/assets/projects/umbral-home.jpg',
+      alt: language === 'es' ? 'Landing de Umbral con catálogo de videojuegos narrativos' : 'Umbral landing page with a narrative games catalogue',
+      caption: copy.umbralHomeCaption,
+    },
+    {
+      src: '/assets/projects/umbral-game-detail.jpg',
+      alt: language === 'es' ? 'Detalle de Persona 5 Royal en Umbral' : 'Persona 5 Royal game detail in Umbral',
+      caption: copy.umbralDetailCaption,
+    },
+  ] as const
   const rawgImages = [
     {
       src: '/assets/projects/rawg-browser-home-desktop.webp',
@@ -404,22 +408,30 @@ function App() {
             <article className="project-entry project-entry--umbral" aria-labelledby="umbral-title">
               <header className="project-heading">
                 <div>
-                  <span className="project-status">{copy.building}</span>
                   <h3 id="umbral-title">{umbral.title}</h3>
+                  <p className="project-description">{umbral.description}</p>
                 </div>
-                {umbral.repository && (
-                  <div className="project-links">
+                <div className="project-links">
+                  {umbral.demo && (
+                    <a href={umbral.demo} target="_blank" rel="noreferrer">
+                      <ExternalLink size={17} aria-hidden="true" />
+                      {copy.openDemo}
+                    </a>
+                  )}
+                  {umbral.repository && (
                     <a href={umbral.repository} target="_blank" rel="noreferrer">
                       <Github size={17} aria-hidden="true" />
                       {copy.openCode}
                     </a>
-                  </div>
-                )}
+                  )}
+                </div>
               </header>
-              <p className="project-description">{umbral.description}</p>
-              <p className="project-outcome"><strong>{copy.objective}.</strong> {copy.umbralObjective}</p>
-              <p className="development-note">{copy.developmentNote}</p>
+              <p className="project-outcome">{umbral.outcome}</p>
               <TechnologyIcons items={umbral.technologies} label={`${copy.technologies}: ${umbral.title}`} variant="project" />
+
+              <div className="project-evidence" aria-label={`${copy.evidence}: ${umbral.title}`}>
+                <ProjectGallery title={umbral.title} images={umbralImages} labels={copy.gallery} />
+              </div>
             </article>
 
             <article className="project-entry" aria-labelledby="rawg-title">
