@@ -29,7 +29,7 @@ const sharedProjects = {
 export const translations = {
   es: {
     seo: {
-      title: 'Facundo Pompa — Desarrollador de software',
+      title: 'Facundo Pompa - Desarrollador de software',
       description:
         'Portfolio de Facundo Pompa, desarrollador de software enfocado en backend con Java y Spring Boot, con experiencia frontend en React.',
     },
@@ -48,7 +48,7 @@ export const translations = {
     about: {
       title: 'Sobre mí',
       intro:
-        'Soy desarrollador web de Argentina, con un enfoque cada vez más marcado en el backend. Construyo APIs y aplicaciones con Java y Spring Boot, trabajando con lógica de negocio, persistencia de datos y bases de datos relacionales. Me interesa comprender el recorrido completo de una aplicación, desde las reglas que la sostienen hasta la interfaz que la hace usable.',
+        'Soy desarrollador de software de Argentina, con un enfoque cada vez más marcado en el backend. Construyo APIs y aplicaciones con Java y Spring Boot, trabajando con lógica de negocio, persistencia de datos y bases de datos relacionales. Me interesa comprender el recorrido completo de una aplicación, desde las reglas que la sostienen hasta la interfaz que la hace usable.',
       detail:
         'Mi recorrido empezó en el frontend, donde trabajo con React, JavaScript y TypeScript para construir interfaces responsive. Hoy esa base complementa mi perfil backend y me ayuda a pensar también en la experiencia de quien usa el producto.',
       philosophy:
@@ -185,7 +185,7 @@ export const translations = {
   },
   en: {
     seo: {
-      title: 'Facundo Pompa — Software developer',
+      title: 'Facundo Pompa - Software developer',
       description:
         'Portfolio of Facundo Pompa, a software developer focused on backend development with Java and Spring Boot, with frontend experience in React.',
     },
@@ -204,7 +204,7 @@ export const translations = {
     about: {
       title: 'About me',
       intro:
-        'I am a web developer from Argentina with an increasingly strong focus on backend development. I build APIs and applications with Java and Spring Boot, working with business logic, data persistence and relational databases. I am interested in understanding the complete path of an application, from the rules that support it to the interface that makes it usable.',
+        'I am a software developer from Argentina with an increasingly strong focus on backend development. I build APIs and applications with Java and Spring Boot, working with business logic, data persistence and relational databases. I am interested in understanding the complete path of an application, from the rules that support it to the interface that makes it usable.',
       detail:
         'My path started in frontend development, where I work with React, JavaScript and TypeScript to build responsive interfaces. Today, that foundation complements my backend profile and also helps me think about the experience of the person using the product.',
       philosophy:

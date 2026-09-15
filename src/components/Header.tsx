@@ -7,7 +7,7 @@ const EMAIL = 'pompafacundo4@gmail.com'
 
 const headerCopy = {
   es: {
-    role: 'Desarrollador web',
+    role: 'Desarrollador de software',
     about: 'Sobre mí',
     projects: 'Proyectos',
     technologies: 'Tecnologías',
@@ -21,7 +21,7 @@ const headerCopy = {
     emailCopyFailed: 'No se pudo copiar el correo',
   },
   en: {
-    role: 'Web developer',
+    role: 'Software developer',
     about: 'About',
     projects: 'Projects',
     technologies: 'Technologies',
