@@ -128,7 +128,7 @@ export function Header() {
               <a href="https://www.linkedin.com/in/facundo-pompa/" target="_blank" rel="noreferrer" aria-label={t.common.linkedin} title={t.common.linkedin}>
                 <Linkedin size={19} aria-hidden="true" />
               </a>
-              <a href="/Facundo-Pompa-CV.pdf" download aria-label={t.common.downloadCv} title={t.common.downloadCv}>
+              <a href="/facundo-pompa-cv.pdf" download aria-label={t.common.downloadCv} title={t.common.downloadCv}>
                 <FileText size={19} aria-hidden="true" />
               </a>
               <button type="button" onClick={copyEmail} aria-label={copy.copyEmail} title={copy.copyEmail}>
